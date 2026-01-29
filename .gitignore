@@ -1,0 +1,18 @@
+node_modules
+dist
+.DS_Store
+server/public
+vite.config.ts.*
+*.tar.gz
+
+# Service account credentials (sensitive)
+server/service-account.json
+
+# Attached assets (may contain sensitive data)
+attached_assets/
+
+# Local state
+.local/
+
+# Content-Hub (separate project)
+Content-Hub/
