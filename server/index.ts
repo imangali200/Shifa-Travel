@@ -1,6 +1,15 @@
 import { createApp } from "./app";
-import { log } from "./vite";
 import { serveStatic } from "./static";
+
+function log(message: string) {
+  const formattedTime = new Date().toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  });
+  console.log(`${formattedTime} [express] ${message}`);
+}
 
 (async () => {
   const { app, httpServer } = await createApp();
